@@ -8,13 +8,15 @@
     <persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/tmp/jpa"/>
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:~/tmp/jpa"/>-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test_db;DB_CLOSE_DELAY=-1"/>
             <property name="javax.persistence.jdbc.user" value="user"/>
             <property name="javax.persistence.jdbc.password" value="password"/>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create"/>
-            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.generate_statistics" value="true"/>
+            <!--<property name="hibernate.show_sql" value="true"/>-->
         </properties>
     </persistence-unit>
 
