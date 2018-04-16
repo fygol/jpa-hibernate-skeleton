@@ -5,6 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "books")
 public class Book {
+//    @Version
+//    private int version;
 
     @Id
     @GeneratedValue
@@ -20,6 +22,10 @@ public class Book {
     public Book() {
 
     }
+
+//    public int getVersion() {
+//        return version;
+//    }
 
     public Long getId() {
         return id;

@@ -12,9 +12,9 @@
         <appender-ref ref="stdout" />
     </root>
 
-    <logger name="org.hibernate" level="info"/>
-    <logger name="org.hibernate.stat" level="debug"/>
+    <logger name="org.hibernate" level="error"/>
+    <!--<logger name="org.hibernate.stat" level="debug"/>-->
     <logger name="org.hibernate.SQL" level="debug"/>
-    <logger name="org.hibernate.type.descriptor.sql" level="trace"/>
+    <!--<logger name="org.hibernate.type.descriptor.sql" level="trace"/>-->
 
 </configuration>

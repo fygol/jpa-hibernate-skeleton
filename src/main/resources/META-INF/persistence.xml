@@ -9,13 +9,15 @@
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:~/tmp/jpa"/>-->
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test_db;DB_CLOSE_DELAY=-1"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test_db;DB_CLOSE_DELAY=-1;LOCK_TIMEOUT=10000"/>
             <property name="javax.persistence.jdbc.user" value="user"/>
             <property name="javax.persistence.jdbc.password" value="password"/>
+            <!--<property name="javax.persistence.lock.timeout" value="10000"/>-->
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create"/>
-            <property name="hibernate.generate_statistics" value="true"/>
+            <!--<property name="hibernate.connection.isolation" value="4"/>-->
+            <property name="hibernate.generate_statistics" value="false"/>
             <!--<property name="hibernate.show_sql" value="true"/>-->
         </properties>
     </persistence-unit>
